@@ -9,14 +9,14 @@ app.set("view engine","pug");//sets view engine
 app.set("views", "./views");  //tells view engine where to look for templates 
 
 app.get("/",(req,res)=>{
-    res.render("game.pug"); 
+    res.render("bulletforce.pug"); 
 }); 
 
-socketIo.on("connection",(socket)=>{
-    socket.on("message",(msg)=>{
-        socketIo.emit("message",msg); 
-    });
-});
+// socketIo.on("connection",(socket)=>{
+//     socket.on("message",(msg)=>{
+//         socketIo.emit("message",msg); 
+//     });
+// });
 
 
 http.listen(3000,()=>{
